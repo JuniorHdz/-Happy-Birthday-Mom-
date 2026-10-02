@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background:
+    radial-gradient(circle at top, #8b3fa9, transparent 40%),
+    linear-gradient(135deg, #21002f, #4b145f, #8d237c);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 30px;
+}
+
+.hero-content {
+  max-width: 900px;
+  animation: fadeUp 1.5s ease;
+}
+
+.small-title {
+  color: #ffd4f2;
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(65px, 10vw, 130px);
+  color: #fff;
+  text-shadow:
+    0 0 10px #ff8bd8,
+    0 0 30px #d94fff;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #ffe5f8;
+  margin-bottom: 40px;
+}
+
+
+/* BUTTON */
+
+button {
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #ff4fc3, #9d3cff);
+
+  box-shadow:
+    0 0 15px #ff4fc3,
+    0 0 35px rgba(255, 79, 195, 0.4);
+
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow:
+    0 0 25px #ff72d0,
+    0 0 50px #a83fff;
+}
+
+
+/* SCROLL */
+
+.scroll {
+  position: absolute;
+  bottom: 25px;
+  color: #ffc8ed;
+  animation: bounce 2s infinite;
+}
+
+
+/* MESSAGE */
+
+.message-section {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-width: 850px;
+  padding: 60px;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 120, 220, 0.05);
+
+  text-align: center;
+
+  transition: 1s ease;
+}
+
+.card h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 65px;
+  color: #ffb4e5;
+  margin-bottom: 30px;
+}
+
+.card p {
+  font-size: 17px;
+  line-height: 2;
+  color: #ffe8f7;
+  margin: 20px 0;
+}
+
+.flower {
+  font-size: 55px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.final-message {
+  font-size: 22px !important;
+  color: #ffb6e7 !important;
+  font-weight: 600;
+}
+
+
+/* HIDDEN ANIMATION */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* GALLERY */
+
+.gallery-section {
+  padding: 100px 30px;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 70px;
+  color: #ffb7e8;
+}
+
+.gallery-subtitle {
+  margin: 10px 0 50px;
+  color: #ffd8ef;
+}
+
+.gallery {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.photo {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 25px;
+
+  border: 3px solid rgba(255, 190, 240, 0.5);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 80, 200, 0.15);
+
+  transition: 0.5s ease;
+}
+
+.photo:hover {
+  transform: translateY(-10px) rotate(1deg) scale(1.03);
+  border-color: #ff9cdd;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px #ff4fc3;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+.photo:hover img {
+  transform: scale(1.1);
+}
+
+
+/* FINAL */
+
+.final-section {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.final-card {
+  max-width: 700px;
+  padding: 60px 40px;
+  border-radius: 35px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 79, 195, 0.15),
+    rgba(132, 46, 255, 0.2)
+  );
+
+  border: 1px solid rgba(255, 190, 240, 0.3);
+}
+
+.big-heart {
+  font-size: 70px;
+  animation: heartbeat 1.5s infinite;
+}
+
+.final-card h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 65px;
+  color: #ffb6e6;
+  margin: 15px;
+}
+
+.final-card p {
+  color: #ffe6f6;
+  line-height: 2;
+  font-size: 17px;
+}
+
+.final-card h3 {
+  font-size: 24px;
+  margin-top: 30px;
+  color: #ffb5e5;
+}
+
+.stars {
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #ffcce9;
+}
+
+
+/* FLOATING HEARTS */
+
+.heart {
+  position: fixed;
+  bottom: -50px;
+  pointer-events: none;
+  z-index: 10;
+
+  animation: rise linear forwards;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .card {
+    padding: 35px 20px;
+  }
+
+  .card h2 {
+    font-size: 50px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-section h2 {
+    font-size: 55px;
+  }
+
+  .photo {
+    height: 350px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
